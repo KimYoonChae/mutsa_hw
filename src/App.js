@@ -1,12 +1,15 @@
 
-import Header from "./components/header";
-import Nb from "./components/nb";
+import Main from "./components/main";
+import Dashboard from "./components/dashboard";
+
 
 function App() {
   return (
     <div>
-      <Header />
-      <Nb />
+
+      <Main />
+      <Dashboard />
+
     </div>
   );
 }
