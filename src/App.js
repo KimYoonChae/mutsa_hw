@@ -1,10 +1,11 @@
-
-import Header from "./components/header";
+import Main from "./components/main";
+import Dashboard from "./components/dashboard";
 
 function App() {
   return (
     <div>
-      <Header />
+      <Main />
+      <Dashboard />
     </div>
   );
 }
