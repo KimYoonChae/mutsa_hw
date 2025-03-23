@@ -9,7 +9,7 @@ const Wrapper = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-
+  z-index: 1000; 
   font-size: 18px;
   font-family: "Raleway", sans-serif;
 `;

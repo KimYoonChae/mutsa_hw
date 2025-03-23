@@ -1,40 +1,71 @@
 import React from "react";
-import styled from "styled-components";
-
-const Dashwrapper = styled.div`
-  position: fixed;
-  top:80px;
-  left: 300px;
-  display: flex;
-  align-items: center;
-  font-size: 18px;
-  font-family: "Raleway", sans-serif;
-
-  @media (max-width: 992px) {
- position: fixed;
-  top:80px;
-  left: 100px;
-    transform: translateX(-50%);
-  }
-`;
-
-const Dashicon = styled.i`
-  color: black;
-  font-size: 24px;
-  margin-right: 10px;
-`;
-
-const Mydash = styled.div`
-  color: black;
-  font-weight: bolder;
-`;
+import styles from "../styles/Dashboard.module.css";  // 스타일 불러오기
 
 const Dashboard = () => {
   return (
-    <Dashwrapper>
-      <Dashicon className="fa fa-dashboard" />
-      <Mydash>My Dashboard</Mydash>
-    </Dashwrapper>
+    <div>
+      <header className={styles.customBox}>
+        <h5>
+          <b>
+            <i className="fa fa-dashboard"></i> My Dashboard
+          </b>
+        </h5>
+      </header>
+
+      <div className={styles.w3RowPadding}>
+        <div className={styles.w3Quarter}>
+          <div className={`${styles.w3Container} ${styles.w3Red} ${styles.w3Padding16}`}>
+            <div className={styles.w3Left}>
+              <i className="fa fa-comment ${styles.w3Xxlarge}"></i>
+            </div>
+            <div className={styles.w3Right}>
+              <h3>52</h3>
+            </div>
+            <div className={styles.w3Clear}></div>
+            <h4>Messages</h4>
+          </div>
+        </div>
+
+        <div className={styles.w3Quarter}>
+          <div className={`${styles.w3Container} ${styles.w3Blue} ${styles.w3Padding16}`}>
+            <div className={styles.w3Left}>
+              <i className="fa fa-eye ${styles.w3Xxlarge}"></i>
+            </div>
+            <div className={styles.w3Right}>
+              <h3>99</h3>
+            </div>
+            <div className={styles.w3Clear}></div>
+            <h4>Views</h4>
+          </div>
+        </div>
+
+        <div className={styles.w3Quarter}>
+          <div className={`${styles.w3Container} ${styles.w3Teal} ${styles.w3Padding16}`}>
+            <div className={styles.w3Left}>
+              <i className="fa fa-share-alt ${styles.w3Xxlarge}"></i>
+            </div>
+            <div className={styles.w3Right}>
+              <h3>23</h3>
+            </div>
+            <div className={styles.w3Clear}></div>
+            <h4>Shares</h4>
+          </div>
+        </div>
+
+        <div className={styles.w3Quarter}>
+          <div className={`${styles.w3Container} ${styles.w3Orange} ${styles.w3TextWhite} ${styles.w3Padding16}`}>
+            <div className={styles.w3Left}>
+              <i className="fa fa-users ${styles.w3Xxlarge}"></i>
+            </div>
+            <div className={styles.w3Right}>
+              <h3>50</h3>
+            </div>
+            <div className={styles.w3Clear}></div>
+            <h4>Users</h4>
+          </div>
+        </div>
+      </div>
+    </div>
   );
 };
 

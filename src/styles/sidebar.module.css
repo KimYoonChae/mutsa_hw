@@ -1,0 +1,145 @@
+
+
+.sidebarWrapper {
+  width: 300px;
+  height: 100vh;
+  background-color: #fff;
+  color: #000;
+  
+}
+
+.avatar {
+  border-radius: 50%;
+  vertical-align: middle;
+  width: 46px;
+  position: fixed;
+  top: 70px;
+  left: 20px;
+
+  
+
+}
+
+.welcome {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+  position:fixed;
+  top:50px;
+  left:120px;
+  display: flex;
+
+}
+
+.welcome span {
+  margin-left: 5px; 
+}
+
+.w3 {
+  display: flex; /* flex로 아이콘 정렬 */
+  align-items: center; /* 아이콘을 수직 중앙 정렬 */
+  gap: 5px; /* 아이콘 사이의 간격 조정 */
+  
+  position: fixed;
+  top: 85px;  /* Welcome 아래 위치 */
+  left: 120px;
+
+  padding: 8px 16px;
+  height: 38.5px;
+  width: auto;
+  
+  font-family: Raleway, sans-serif;
+  font-size: 13px;
+  line-height: 22.5px;
+  text-align: center;
+  text-decoration: none;
+  
+  color: rgb(0, 0, 0);
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  outline: none;
+}
+
+.w3 i {
+  margin-right: 23px;  /* 아이콘들 간에 간격 추가 */
+}
+
+hr {
+  border: 0;
+  border-top: 1px solid #eee;
+  margin-top: 150px;
+}
+
+.dashboard{
+  display: flex;
+  align-items: center;
+  margin-top: 30px;
+  padding-left:16px ;
+  font-size: 18px;
+}
+
+.w3BarItems {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+
+  width: calc(100% - 40px);
+  text-size-adjust: 100%;
+}
+
+.w3BarItem {
+  box-sizing: border-box;
+  display: block;
+  float: none;
+  height: 38.5px;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  padding: 8px 16px;
+  width: 300px;
+  text-size-adjust: 100%;
+  font-family: Raleway, sans-serif;
+  font-size: 15px;
+  line-height: 22.5px;
+  text-align: left;
+  text-decoration: none;
+  text-wrap: wrap;
+  vertical-align: middle;
+  white-space-collapse: collapse;
+
+  background-color: rgba(0, 0, 0, 0);
+  border: none;
+  cursor: pointer;
+  outline: none;
+}
+
+.w3BarItem:hover {
+  background-color: lightgray;
+}
+
+.selectedItem {
+
+  background-color: #2196F3; /* Overview 항목만 다른 배경색 */
+  box-sizing: border-box;
+  display: block;
+  float: none;
+  height: 38.5px;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  padding: 8px 16px;
+  width: 300px;
+  text-size-adjust: 100%;
+  font-family: Raleway, sans-serif;
+  font-size: 15px;
+  line-height: 22.5px;
+  text-align: left;
+  text-decoration: none;
+  text-wrap: wrap;
+  vertical-align: middle;
+  white-space-collapse: collapse;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  outline: none;
+
+}
