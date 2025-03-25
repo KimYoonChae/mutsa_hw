@@ -1,52 +1,73 @@
 import React from 'react';
-import avatar2 from '../images/avatar2.png';
+import styles from "../styles/sidebar.module.css"; 
+import avatar2 from '../images/avatar2.png'; // avatar2로 변경
 
-function Sidebar({ isOpen, closeSidebar }) {
+function Sidebar({ isOpen, closeSidebar, isMobile }) {
   return (
     <nav
-      className={`w3-sidebar w3-collapse w3-white w3-animate-left ${isOpen ? 'w3-show' : ''}`}
-      style={{
-        zIndex: 3,
-        width: '300px',
-        position: 'fixed',
-        left: 0,
-        top: 0,
-        height: '100vh',
-        display: isOpen ? 'block' : 'none', // 상태에 따라 사이드바 보이게 설정
-        
-      }}
+      className={`${styles.sidebar} w3-sidebar w3-collapse w3-white w3-animate-left ${isOpen ? 'open' : ''}`} // open 클래스 적용
       id="mySidebar"
+      style={{ display: isOpen ? 'block' : 'none' }} // isOpen 상태에 따라 display 설정
     >
-      <br />
-      <div className="w3-container w3-row"  style={{ marginTop: '50px' }}>
-        <div className="w3-col s4">
-          <img src={avatar2} className="w3-circle w3-margin-right" style={{ width: '46px' }} />
+      <div className={styles.sidebarWrapper}>
+        <img 
+          src={avatar2}  // 수정된 이미지 변수 사용
+          className={styles.avatar}
+          alt="Avatar"
+        />
+        <div className={styles.welcome}>
+          Welcome, <span style={{ fontWeight: "bold" }}>Mike</span>
         </div>
-        <div className="w3-col s8 w3-bar">
-          <span>Welcome, <strong>Mike</strong></span>
-          <br />
-          <a href="#" className="w3-bar-item w3-button"><i className="fa fa-envelope"></i></a>
-          <a href="#" className="w3-bar-item w3-button"><i className="fa fa-user"></i></a>
-          <a href="#" className="w3-bar-item w3-button"><i className="fa fa-cog"></i></a>
+        <div className={styles.w3}>
+          <i className="fa fa-envelope"></i> 
+          <i className="fa fa-user"></i>
+          <i className="fa fa-cog"></i>
         </div>
-      </div>
-      <hr />
-      <div className="w3-container">
-        <h5>Dashboard</h5>
-      </div>
-      <div className="w3-bar-block">
-        <a href="#" className="w3-bar-item w3-button w3-padding-16 w3-hide-large w3-dark-grey w3-hover-black" onClick={closeSidebar} title="close menu">
-          <i className="fa fa-remove fa-fw"></i>&nbsp; Close Menu
-        </a>
-        <a href="#" className="w3-bar-item w3-button w3-padding w3-blue"><i className="fa fa-users fa-fw"></i>&nbsp; Overview</a>
-        <a href="#" className="w3-bar-item w3-button w3-padding"><i className="fa fa-eye fa-fw"></i>&nbsp; Views</a>
-        <a href="#" className="w3-bar-item w3-button w3-padding"><i className="fa fa-users fa-fw"></i>&nbsp; Traffic</a>
-        <a href="#" className="w3-bar-item w3-button w3-padding"><i className="fa fa-bullseye fa-fw"></i>&nbsp; Geo</a>
-        <a href="#" className="w3-bar-item w3-button w3-padding"><i className="fa fa-diamond fa-fw"></i>&nbsp; Orders</a>
-        <a href="#" className="w3-bar-item w3-button w3-padding"><i className="fa fa-bell fa-fw"></i>&nbsp; News</a>
-        <a href="#" className="w3-bar-item w3-button w3-padding"><i className="fa fa-bank fa-fw"></i>&nbsp; General</a>
-        <a href="#" className="w3-bar-item w3-button w3-padding"><i className="fa fa-history fa-fw"></i>&nbsp; History</a>
-        <a href="#" className="w3-bar-item w3-button w3-padding"><i className="fa fa-cog fa-fw"></i>&nbsp; Settings</a>
+        <hr />
+        <div className={styles.dashboard}>
+          Dashboard
+        </div>
+
+        {/* 모바일 화면에서만 클로즈 버튼 보이도록 설정 */}
+        {isMobile && (
+          <a 
+            className={styles.closebtn} 
+            onClick={closeSidebar} // 클로즈 함수 호출
+            title="close menu"
+          >
+            <i className="fa fa-remove fa-fw"></i>&nbsp; Close Menu
+          </a>
+        )}
+
+        <div className={styles.w3BarItems}>
+          <div className={styles.selectedItem}>
+            <i className="fa fa-users fa-fw"></i>&nbsp; Overview
+          </div>
+          <div className={styles.w3BarItem}>
+            <i className="fa fa-eye fa-fw"></i>&nbsp; Views
+          </div>
+          <div className={styles.w3BarItem}>
+            <i className="fa fa-users fa-fw"></i>&nbsp; Traffic
+          </div>
+          <div className={styles.w3BarItem}>
+            <i className="fa fa-bullseye fa-fw"></i>&nbsp; Geo
+          </div>
+          <div className={styles.w3BarItem}>
+            <i className="fa fa-diamond fa-fw"></i>&nbsp; Orders
+          </div>
+          <div className={styles.w3BarItem}>
+            <i className="fa fa-bell fa-fw"></i>&nbsp; News
+          </div>
+          <div className={styles.w3BarItem}>
+            <i className="fa fa-bank fa-fw"></i>&nbsp; General
+          </div>
+          <div className={styles.w3BarItem}>
+            <i className="fa fa-history fa-fw"></i>&nbsp; History
+          </div>
+          <div className={styles.w3BarItem}>
+            <i className="fa fa-cog fa-fw"></i>&nbsp; Settings
+          </div>
+        </div>
       </div>
     </nav>
   );
