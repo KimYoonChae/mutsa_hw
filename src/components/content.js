@@ -97,6 +97,59 @@ function Content() {
     </div>
   </div>
 </div>
+<div className="statuscontainer">
+   <h5>General Stats</h5>
+   <p>New Visitors</p>
+   <div className="rate">
+     <div className="bar1" style={{ width: '25%' }}>+25%</div>
+   </div>
+ 
+   <p>New Users</p>
+   <div className="rate">
+     <div className="bar2" style={{ width: '50%' }}>50%</div>
+   </div>
+ 
+   <p>Bounce Rate</p>
+   <div className="rate">
+     <div className="bar3" style={{ width: '75%' }}>75%</div>
+   </div>
+ </div>
+
+ <div className="w3-container">
+   <h5>Countries</h5>
+   <table className="w3-table w3-striped w3-bordered w3-border w3-hoverable w3-white">
+     <tr className="c">
+       <td>United States</td>
+       <td>65%</td>
+     </tr>
+     <tr className="backgray2">
+       <td>UK</td>
+       <td>15.7%</td>
+     </tr>
+     <tr className="c">
+       <td>Russia</td>
+       <td>5.6%</td>
+     </tr>
+     <tr className="backgray2">
+       <td>Spain</td>
+       <td>2.1%</td>
+     </tr>
+     <tr className="c">
+       <td>India</td>
+       <td>1.9%</td>
+     </tr>
+     <tr className="backgray2">
+       <td>France</td>
+       <td>1.5%</td>
+     </tr>
+   </table>
+   <br />
+   <button className="w3-button w3-dark-grey">More Countries &nbsp;<i className="fa fa-arrow-right"></i></button>
+ </div>
+
+
+
+
 
     </div>
   );
