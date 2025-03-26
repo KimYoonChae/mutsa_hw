@@ -47,25 +47,57 @@ function Content() {
         </div>
       </div>
 
-      <div className="regionwrap">
-        <div className="region">
-          <div className="regiontitle">Regions</div>
-          <img src={regionImage} className="regionpng" alt="Google Regional Map" />
-        </div>
+      <div className="panel">
+  <div className="content-wrapper">
+    <div className="region-section">
+      <h5>Regions</h5>
+      <img src={regionImage} style={{ width: '100%' }} alt="Google Regional Map" />
+    </div>
+    <div className="feeds-section">
+      <h5>Feeds</h5>
+      <table className="feedtable">
+        <tbody>
+          <tr>
+            <td><i className="fa fa-user user"></i></td>
+            <td>New record, over 90 views.</td>
+            <td><i>10 mins</i></td>
+          </tr>
+          <tr className="backgray">
+            <td><i className="fa fa-bell bell"></i></td>
+            <td>Database error.</td>
+            <td><i>15 mins</i></td>
+          </tr>
+          <tr>
+            <td><i className="fa fa-users users"></i></td>
+            <td>New record, over 40 users.</td>
+            <td><i>17 mins</i></td>
+          </tr>
+          <tr className="backgray">
+            <td><i className="fa fa-comment comment"></i></td>
+            <td>New comments.</td>
+            <td><i>25 mins</i></td>
+          </tr>
+          <tr>
+            <td><i className="fa fa-bookmark bookmark"></i></td>
+            <td>Check transactions.</td>
+            <td><i>28 mins</i></td>
+          </tr>
+          <tr className="backgray">
+            <td><i className="fa fa-laptop comment"></i></td>
+            <td>CPU overload.</td>
+            <td><i>35 mins</i></td>
+          </tr>
+          <tr>
+            <td><i className="fa fa-share-alt share"></i></td>
+            <td>New shares.</td>
+            <td><i>39 mins</i></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
 
-        <div className="feeds">
-          <div className="feedtitle">Feeds</div>
-          <div className="feedlist">
-            <div className="feedcard"><i className="fa fa-user"></i> New record, over 90 views. <span>10 mins ago</span></div>
-            <div className="feedcard"><i className="fa fa-bell"></i> Database error. <span>15 mins ago</span></div>
-            <div className="feedcard"><i className="fa fa-users"></i> New record, over 40 users. <span>17 mins ago</span></div>
-            <div className="feedcard"><i className="fa fa-comment"></i> New comments. <span>25 mins ago</span></div>
-            <div className="feedcard"><i className="fa fa-bookmark"></i> Check transactions. <span>28 mins ago</span></div>
-            <div className="feedcard"><i className="fa fa-laptop"></i> CPU overload. <span>35 mins ago</span></div>
-            <div className="feedcard"><i className="fa fa-share-alt"></i> New shares. <span>39 mins ago</span></div>
-          </div>
-        </div>
-      </div>
     </div>
   );
 }

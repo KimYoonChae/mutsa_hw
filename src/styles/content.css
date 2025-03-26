@@ -1,120 +1,112 @@
 body {
-  background-color:rgb(240, 240, 240);
+  background-color: rgb(240, 240, 240);
 }
-.main{
- margin-left: 300px;
- margin-top: 43px;
- font-family: "Raleway", sans-serif;
- font-weight: 700;
- font-size: 18px;
+
+.main {
+  margin-left: 300px;
+  margin-top: 43px;
+  font-family: "Raleway", sans-serif;
+  font-weight: 700;
+  font-size: 18px;
 }
-.maincontainer{
+
+.maincontainer {
   padding-top: 22px;
   padding-left: 25px;
   padding-bottom: 10px;
 }
 
-.tabs{
-  padding-left:15px;
-  padding-right:15px;
-  padding-bottom: 100px;
+.tabs {
+  padding: 0 15px 0; /* padding-bottom을 0으로 설정하여 상하 여백을 줄였습니다. */
   font-family: Verdana, sans-serif;
   font-size: 15px;
-  
-}
-.boxx{
-  float: left;
-  width: 23%; /* 크기를 조정 */
-  margin: 0 0.5%; /* 좌우 마진을 균등하게 설정 */
-  padding: 0 5px; /* 패딩 조정 */
-}
-.boxcon_1{
-  color: #fff !important;
-  background-color: #f44336 !important;
-  padding-top: 16px !important;
-  padding-bottom: 16px !important;
-  padding-left: 8px;
-  padding-right: 8px;
-}
-.boxcon_2{
-  color: #fff !important;
-  background-color: #2196F3 !important;
-  padding-left: 8px;
-  padding-top: 16px !important;
-  padding-bottom: 16px !important;
-  padding-right: 8px;
-}
-.boxcon_3{
-  color: #fff !important;
-  background-color: #009688 !important;
-  padding-top: 16px !important;
-  padding-bottom: 16px !important;
-  padding-left: 8px;
-  padding-right: 8px;
-}
-.boxcon_4{
-  color: #fff !important;
-  background-color: #ff9800 !important;
-  padding-top: 16px !important;
-  padding-bottom: 16px !important;
-  padding-left: 8px;
-  padding-right: 8px;
-}
-.regionpng{
-  width: 70%;
-  float: left;
-  padding-left: 5px;
+  display: flex; /* 플렉스 레이아웃을 사용하여 탭을 일렬로 배치 */
+  justify-content: space-between; /* 탭 간 간격을 균등하게 설정 */
 }
 
-
-.feedcon{
-  font-family: "Raleway", sans-serif;
-  font-weight: 400;
-  font-size: 18px;
+.boxx {
+  width: 23%;
+  margin: 0 0.5%;
+  padding: 0 5px;
 }
 
-.regionwrap {
+.boxcon_1, .boxcon_2, .boxcon_3, .boxcon_4 {
+  padding: 16px 8px;
+  color: #fff !important;
+}
+
+.boxcon_1 { background-color: #f44336; }
+.boxcon_2 { background-color: #2196F3; }
+.boxcon_3 { background-color: #009688; }
+.boxcon_4 { background-color: #ff9800; }
+
+.panel {
+  margin: 16px 0;
+  padding: 0.01em 22px;
+  box-sizing: inherit;
+  content: "";
+  display: flex; /* 플렉스 레이아웃을 사용하여 리전과 피드를 배치 */
+  flex-wrap: wrap; /* 요소들이 줄 바꿈을 할 수 있게 설정 */
+}
+
+.content-wrapper {
   display: flex;
-  padding-top: 50px;
-  padding-left: 25px;
+  justify-content: space-between;
+  width: 100%;
 }
 
-.regiontitle{
-  font-family: "Raleway", sans-serif;
-  padding-left: 5px;
-  padding-bottom:15px;
-  display: flex;
-}
-.feedtitle{
-  padding-bottom:15px;
+.region-section, .feeds-section {
+  padding: 0 16px;
 }
 
-
-
-/* regionwrap을 flexbox로 설정하여 두 요소를 가로로 배치 */
-.regionwrap {
-  display: flex;
-  justify-content: flex-start;/* 두 요소 간에 공간을 균등하게 배치 */
-  gap: 0px; /* 두 요소 간의 간격 */
-  margin-top: 20px; /* 위쪽 여백 추가 */
-  
+.region-section {
+  width: 30%; /* 리전 섹션의 너비를 45%로 설정하여 피드 섹션과 균형을 맞췄습니다. */
+  height: auto; /* 리전 섹션 높이를 자동으로 맞추기 */
 }
 
-/* region 클래스 */
-.region {
-  flex: 1; /* 공간을 고르게 차지 */
-  min-width: 300px; /* 최소 너비 설정 */
+.feeds-section {
+  width: 65%; /* 피드 섹션의 너비를 53%로 설정하여 리전 섹션과 균형을 맞췄습니다. */
+  height: auto; /* 피드 섹션 높이를 자동으로 맞추기 */
 }
 
-/* feeds 클래스 */
-.feeds {
-  flex: 1; /* 공간을 고르게 차지 */
-  min-width: 300px; /* 최소 너비 설정 */
+.feedtable {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #fff !important;
+  font-size: 15px;
+  line-height: 1.5;
 }
 
-/* regiontitle 및 feedtitle 스타일 */
-.regiontitle, .feedtitle {
-  font-size: 18px;
-  font-weight: bold;
-  margin-bottom: 10px; /* 제목과 콘텐츠 간 간격 */
+.feedtable td {
+  padding: 8px 16px;
+  text-align: left;
+}
+
+.user, .bookmark {
+  color: #2196F3 !important;
+  font-size: 18px !important;
+}
+
+.bell, .comment {
+  color: #f44336 !important;
+  font-size: 18px !important;
+}
+
+.users {
+  color: #d2be0e !important;
+  font-size: 18px !important;
+}
+
+.share {
+  color: #4CAF50 !important;
+  font-size: 18px !important;
+}
+
+.backgray {
+  background-color: rgb(240, 240, 240);
+}
+
+.region-section img {
+  width: 100%;
+  height: auto; /* 이미지 높이를 자동으로 맞추기 */
 }
