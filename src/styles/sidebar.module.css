@@ -37,7 +37,7 @@
     margin-left: 5px;
   }
   
-  .w3 {
+  .topIcons {
     display: flex;
     align-items: center;
     gap: 5px;
@@ -59,11 +59,11 @@
     outline: none;
   }
   
-  .w3 i {
+  .topIcons i {
     margin-right: 23px;
   }
   
-  .w3 i:hover {
+  .topIcons i:hover {
     background-color: lightgray;
     padding: 5px;
   }
@@ -83,14 +83,14 @@
     font-size: 18px;
   }
   
-  .w3BarItems {
+  .Items {
     display: flex;
     flex-direction: column;
     padding-left: 0;
     width: 100%;
   }
   
-  .w3BarItem {
+  .Item {
     padding: 10px 20px;
     font-size: 15px;
     background-color: transparent;
@@ -102,7 +102,7 @@
     width: 100%;
   }
   
-  .w3BarItem:hover {
+  .Item:hover {
     background-color: lightgray;
   }
   
