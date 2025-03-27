@@ -1,17 +1,16 @@
 import React from 'react';
 import styles from "../styles/sidebar.module.css"; 
-import avatar2 from '../images/avatar2.png'; // avatar2로 변경
-
+import avatar2 from '../images/avatar2.png';
 function Sidebar({ isOpen, closeSidebar, isMobile }) {
   return (
     <nav
-      className={`${styles.sidebar} w3-sidebar w3-collapse w3-white w3-animate-left ${isOpen ? 'open' : ''}`} // open 클래스 적용
+      className={`${styles.sidebar} w3-sidebar w3-collapse w3-white w3-animate-left ${isOpen ? 'open' : ''}`} 
       id="mySidebar"
-      style={{ display: isOpen ? 'block' : 'none' }} // isOpen 상태에 따라 display 설정
+      style={{ display: isOpen ? 'block' : 'none' }} 
     >
       <div className={styles.sidebarWrapper}>
         <img 
-          src={avatar2}  // 수정된 이미지 변수 사용
+          src={avatar2} 
           className={styles.avatar}
           alt="Avatar"
         />
@@ -28,11 +27,11 @@ function Sidebar({ isOpen, closeSidebar, isMobile }) {
           Dashboard
         </div>
 
-        {/* 모바일 화면에서만 클로즈 버튼 보이도록 설정 */}
+      
         {isMobile && (
           <a 
             className={styles.closebtn} 
-            onClick={closeSidebar} // 클로즈 함수 호출
+            onClick={closeSidebar}
             title="close menu"
           >
             <i className="fa fa-remove fa-fw"></i>&nbsp; Close Menu
