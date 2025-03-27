@@ -181,9 +181,9 @@ function Content() {
         <h5>Countries</h5>
         <table className="countrytable">
           <tbody>
-            <tr className="country">
-              <td className="left">United States</td>
-              <td className="right">65%</td>
+            <tr className="country"> {/*table구조에서 tr은 한 행을 의미한다. */}
+              <td className="left">United States</td> {/*td는 테이블 데이터고 나라를 왼쪽 정렬함 */}
+              <td className="right">65%</td> {/*td는 테이블 데이터고 퍼센트를 오른쪽 정렬함 */}
             </tr>
             <tr className="backgray2">
               <td className="left">UK</td>
@@ -219,8 +219,8 @@ function Content() {
   
       <div className="statuscontainer">
         <h5>Recent Users</h5>
-        <ul className="card">
-          <li className="cardpadding">
+        <ul className="card"> {/*순서 없는 목록 */}
+          <li className="cardpadding"> {/*목록 안에 아이템 */}
             <img src={avatar2} className="cardmargin" alt="User 1" />
             <span className="w3-xlarge">Mike</span>
           </li>

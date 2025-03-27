@@ -431,66 +431,94 @@ h4 {
   color: #ddd;
 }
 
+/* 
+   600px 이하
+ */
 @media (max-width: 600px) {
   .row {
-    flex-wrap: wrap;
-    justify-content: center;
+    flex-wrap: wrap;         /* row 안의 요소들이 줄 바꿈할 수 있도록 */
+    justify-content: center; /* 요소들을 중앙 정렬 */
   }
+
   .footerbox {
-    flex: 1 1 45%;
+    flex: 1 1 45%;           /* footer 항목을 한 줄에 2개씩 보이도록 (45% 너비) */
   }
 }
 
+/* 
+   400px 이하
+ */
 @media (max-width: 400px) {
   .footerbox {
-    flex: 1 1 100%;
+    flex: 1 1 100%;          /* footer 항목을 한 줄에 1개씩 (100% 너비) */
   }
 }
 
+/* 
+   1024px 이하
+   사이드바가 좁은 화면에서 사라지도록
+ */
 @media (max-width: 1024px) {
   .main {
-    margin-left: 0;
-    font-size: 16px;
+    margin-left: 0;          /* 사이드바 공간 제거 (왼쪽 여백 없애기) */
+    font-size: 16px;         /* 글자 크기 조금 작게 */
   }
 
-  .region-section, .feeds-section, .footercon {
+  /* 주요 섹션들을 100% 너비로 설정해서 수직 정렬 가능하게 */
+  .region-section,
+  .feeds-section,
+  .footercon {
     width: 100%;
   }
 }
 
+/* 
+   768px 이하
+   탭, 콘텐츠, 푸터 등 수직 정렬
+ */
 @media (max-width: 768px) {
   .tabs {
-    flex-direction: column;
-    align-items: center;
+    flex-direction: column;  /* 색상 박스들 세로로 정렬 (기본은 가로) */
+    align-items: center;     /* 가운데 정렬 */
   }
 
   .boxx {
-    width: 100%;
-    margin-bottom: 10px;
+    width: 100%;             /* 탭 박스들 한 줄에 하나씩 차지 */
   }
 
   .content-wrapper {
-    flex-direction: column;
+    flex-direction: column;  /* Region과 Feeds 수직 정렬 */
   }
 
-  .region-section, .feeds-section, .footercon, .row {
-    width: 100%;
+  .region-section,
+  .feeds-section,
+  .footercon,
+  .row {
+    width: 100%;             /* 전체 너비 사용 */
   }
 }
 
+/* 
+   480px 이하
+   글자와 패딩을 줄여 정보 밀도 높이기
+ */
 @media (max-width: 480px) {
   .main {
-    font-size: 14px;
-    margin-top: 20px;
+    font-size: 14px;         /* 전체 글자 더 작게 */
+    margin-top: 20px;        /* 상단 여백 줄임 */
   }
 
-  .boxcon_1, .boxcon_2, .boxcon_3, .boxcon_4 {
-    font-size: 14px;
-    padding: 10px;
+  .boxcon_1,
+  .boxcon_2,
+  .boxcon_3,
+  .boxcon_4 {
+    font-size: 14px;         /* 통계 박스 폰트 축소 */
+    padding: 10px;           /* 안쪽 여백 축소 */
   }
 
   .feedtable td {
-    padding: 5px;
-    font-size: 13px;
+    padding: 5px;            /* 테이블 셀 패딩 축소 */
+    font-size: 13px;         /* 테이블 글자 축소 */
   }
 }
+
